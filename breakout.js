@@ -1,5 +1,5 @@
-show = getElementById('show')
+toggle = getElementById('toggle')
 
-show.addEventListener('click',() => {
+toggle.addEventListener('click',() => {
     document.rules.classList.add('show')
 })

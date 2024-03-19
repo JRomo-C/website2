@@ -51,4 +51,12 @@ h1 {
     top: 0;
     left: 0;
     background-color: white;
+    min-height: 100vh;
+    width: 400px;
+    padding: 20px;
+    line-height: 1.5;
+    transform: translateX(-400px);
+    transition: transform 1s ease-in-out
 }
+
+.rules.active 

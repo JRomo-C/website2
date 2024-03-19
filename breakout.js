@@ -1,6 +1,6 @@
-open = getElementById('rules-btn')
-close = getElementById('close-btn')
-rules = getElementById('rules')
+open = document.getElementById('rules-btn')
+close = document.getElementById('close-btn')
+rules = document.getElementById('rules')
 
 // Rules open and close event handlers
 open.addEventListener('click',() => {

@@ -1,5 +1,7 @@
-show = getElementById('show')
+btn-open = getElementById('rules-btn')
+btn-close = getElementById('close-btn')
+rules = getElementById('rules')
 
-show.addEventListener('click',() => {
-    document.body.classList.toggle('show')
+btn-open.addEventListener('click',() => {
+    rules.classList.add('show')
 })

@@ -1,5 +1,5 @@
 show = getElementById('show')
 
 show.addEventListener('click',() => {
-    document.rules.classList.toggle('show')
+    document.body.classList.toggle('show')
 })

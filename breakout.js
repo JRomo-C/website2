@@ -1,7 +1,7 @@
-btn-open = getElementById('rules-btn')
-btn-close = getElementById('close-btn')
+btnopen = getElementById('rules-btn')
+btnclose = getElementById('close-btn')
 rules = getElementById('rules')
 
-btn-open.addEventListener('click',() => {
+btnopen.addEventListener('click',() => {
     rules.classList.add('show')
 })

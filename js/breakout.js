@@ -45,7 +45,7 @@ function drawBall() {
 
 //Draw score on canvas
 function drawScore() {
-    
+    ctx.fillText(`Score: ${score}, canvas.width-100, 30,)
 }
 
 //Draw Everything

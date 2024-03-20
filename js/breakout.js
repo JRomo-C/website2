@@ -43,10 +43,16 @@ function drawBall() {
     ctx.closePath()
 }
 
+//Draw score on canvas
+function drawScore() {
+    
+}
+
 //Draw Everything
 function draw() {
-    drawBall()
     drawPaddle()
+    drawBall()
+
 }
 
 draw()

@@ -4,7 +4,7 @@ rules = document.getElementById('rules')
 canvas = document.getElementById('canvas')
 ctx = canvas.getContext('2d')
 
-score : 0
+score = 0
 
 brickRowCount = 9
 brickColumnCount = 5

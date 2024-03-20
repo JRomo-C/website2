@@ -25,15 +25,22 @@ paddle = {
 
 }
 
-
-
-
 // Draw ball on canvas
 function drawBall() {
     ctx.beginPath()
     ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2, true)
     ctx.fillStyle = 'black'
     ctx.fill()
+    ctx.closePath()
+}
+
+// Draw paddle on canvas
+function drawBall() {
+    ctx.beginPath()
+    ctx.
+    ctx.fillStyle = 'black'
+    ctx.fill()
+    ctx.closePath()
 }
 
 drawBall();

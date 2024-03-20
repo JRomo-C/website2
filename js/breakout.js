@@ -4,6 +4,11 @@ rules = document.getElementById('rules')
 canvas = document.getElementById('canvas')
 ctx = canvas.getContext('2d')
 
+score : 0;
+
+brickRowCount = 9
+brickColumnCount = 5
+
 // Create ball properties
 ball = {
     x: canvas.width / 2,
@@ -23,6 +28,16 @@ paddle = {
     speed: 8,
     dx: 0,
 
+}
+
+//Create Brick Properties
+brickInfo = {
+    w: 70,
+    h: 20,
+    padding: 10,
+    offsetX: 45,
+    offsetY: 60,
+    visible: true
 }
 
 // Draw ball on canvas
@@ -46,7 +61,7 @@ function drawPaddle() {
 //Draw score on canvas
 function drawScore() {
     ctx.font ='20px Arial'
-    ctx.fillText(`Score: ${score}`, canvas.width-100, 30)
+    ctx.fillText(`Score: ${score}`,canvas.width-100, 30)
 }
 
 //Draw Everything

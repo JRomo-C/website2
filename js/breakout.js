@@ -107,12 +107,26 @@ function movePaddle() {
 
 //Keydown event
 function keyDown(e) {
-    if (e.key == 'ArrowRight' || e.key == 'Right' || e.key == 'd')
-    paddle.dx = paddle.speed
+    if (e.key == 'ArrowRight' || e.key == 'Right' || e.key == 'd') {
+        paddle.dx = paddle.speed
+    }
+    if (e.key == 'ArrowLeft' || e.key == 'Left' || e.key == 'a') {
+        paddle.dx = -paddle.speed
+    }
+
+}
+
+//KeyUp Event
+function keyUp(e) {
+    if (e.key == 'ArrowRight' || e.key == 'Right' || e.key == 'd' || e.key == 'ArrowLeft' || e.key == 'Left' || e.key == 'a') {
+        paddle.dx = 0
+    }
+
 }
 
 //Keyboard event handlers
 document.addEventListener('keydown', keyDown)
+document.addEventListener('keyup', keyUp)
 
 // Update Canvas drawing and animation
 function update() {

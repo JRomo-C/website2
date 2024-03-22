@@ -99,6 +99,11 @@ function draw() {
 }
 
 
+// Move paddle on canvas
+function movePaddle() {
+    
+}
+
 // Update Canvas drawing and animation
 function update() {
     movePaddle()

@@ -148,6 +148,11 @@ function moveBall() {
     // Wall collision (right)
     if (ball.x + ball.size > canvas.width) {
         ball.dx = -1 * ball.dx
+
+    // Wall collision (bottom)
+    if (ball.y + ball.size > canvas.height) {
+        ball.dy = -1 * ball.dy
+    }
     }
 
 }

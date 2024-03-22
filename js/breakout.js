@@ -98,7 +98,15 @@ function draw() {
     drawScore()
 }
 
-draw()
+
+// Update Canvas drawing and animation
+function update() {
+    movePaddle()
+    draw()
+    requestAnimationFrame(update)
+}
+
+update()
 
 
 

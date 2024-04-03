@@ -218,6 +218,7 @@ function update() {
     moveBall()
     movePaddle()
     draw()
+    requestAnimationFrame(update)
 }
 
 update()

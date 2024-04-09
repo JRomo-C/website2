@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+        box-sizing: border-box;
+}
+
+body {
+    background-color: #a3170d;
+    color: #ffffff;
+    font-family: "Pixelify Sans", sans-serif;
+    height: 100vh;
+    text-align: center;
+}
+
+.choose-insect-btn img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.screen {
+    height: 100vh;
+    width : 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border: 0;
+    background-color: #ffffff;
+    color: #a3170d;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-family: inherit;
+}
+.btn:hover {
+    opacity: 0.9;
+}
+
+.screen.up {
+    margin-top: -100vh;
+}
+
+a {
+    color: white;
+}
+
+h1 {
+    line-height: 1.4;
+}
+
+.insects-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+}
+
+.insects-list li {
+    margin: 10px;
+}
+
+.choose-insect-btn {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+}

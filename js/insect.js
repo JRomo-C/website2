@@ -31,7 +31,7 @@ function startGame() {
 
 function increaseTime() {
     let m = math.floor(seconds / 60)
-    let s = 
+    let s = seconds % 60
 }
 
 

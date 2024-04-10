@@ -9,8 +9,8 @@ body {
     color: #ffffff;
     font-family: "Pixelify Sans", sans-serif;
     height: 100vh;
-    text-align: center;
     overflow: hidden;
+    text-align: center;
 }
 
 .choose-insect-btn img {

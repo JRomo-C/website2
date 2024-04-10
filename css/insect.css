@@ -10,6 +10,7 @@ body {
     font-family: "Pixelify Sans", sans-serif;
     height: 100vh;
     text-align: center;
+    overflow: hidden;
 }
 
 .choose-insect-btn img {
@@ -94,7 +95,7 @@ h1 {
 .time {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 10px;
 }
 
 .score {

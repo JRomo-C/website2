@@ -40,6 +40,7 @@ function createInsect() {
 
 function catchInsect() {
     increaseScore()
+    this.classList.add('caught')
 }
 
 function increaseScore() {
@@ -47,6 +48,7 @@ function increaseScore() {
     if (score > 19) {
         message.classList.add('visible')
     }
+    scoreEl.innerHTML = `Score: ${score}`
 }
 
 

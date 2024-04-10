@@ -29,6 +29,10 @@ function startGame() {
     setInterval(increaseTime, 1000)
 }
 
+function increaseTime() {
+    let m = math.floor(seconds / 60)
+}
+
 
 function createInsect() {
     const insect = document.createElement('div')

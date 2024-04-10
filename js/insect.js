@@ -17,8 +17,9 @@ choose_insect_btns.forEach(btn => {
     btn.addEventListener('click', () => {
         const img = btn.querySelector('img')
         const alt = img.getAttribute('alt')
-        const src = src.getAttribute('src')
+        const src = img.getAttribute('src')
         selected_insect = {src, alt}
         screens[1].classList.add('up')
+        setTimeout(createInsect, 1000)
     })
 })

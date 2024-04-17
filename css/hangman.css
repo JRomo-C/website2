@@ -1,0 +1,12 @@
+
+body {
+    background-color: indigo;
+    color: white;
+}
+
+.figure-container {
+    fill: transparent;
+    stroke: white;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}

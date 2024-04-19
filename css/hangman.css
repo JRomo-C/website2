@@ -101,6 +101,7 @@ h1 {
     padding: 12px 20px;
     font-size: 16px;
     border: none;
+    border-radius: 30px;
 }
 
 .popup button:active {
@@ -123,5 +124,5 @@ h1 {
 }
 
 .notification-container.show {
-    
+
 }

@@ -10,3 +10,17 @@ const word = ['application', 'programming', 'interface', 'wizard']
 
 let selectedIndex = Math.floor(word.length)
 let selectedWord = words[selectedIndex]
+
+const correctLetters = []
+const wrongLetters = []
+
+//Show hidden word
+function displayWord() {
+    wordEl.innerHTML = `
+        ${selectedWord}
+
+
+    `
+}
+
+display()

@@ -40,7 +40,11 @@ window.addEventListener('keydown', e => {
     if (e.keyCode >= 65 && e.keyCode <=90) {
         const letter = e.key
 
-        if (selectedWord )
+        if (selectedWord.includes(letter)) {
+            if (!correctLetters.includes(letter)) {
+                correctLetters.push(letter)
+            }
+        }
     }
 })
 

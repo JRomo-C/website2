@@ -29,7 +29,8 @@ function displayWord() {
     const innerWord = word.El.innerText.()
 
     if (innerWord == selectedWord) {
-        finalMessage.innerText = 'Congratulations! You Won!' popup.style.display = 'flex'
+        finalMessage.innerText = 'Congratulations! You Won!'
+        popup.style.display = 'flex'
     }
 }
 
@@ -48,6 +49,8 @@ window.addEventListener('keydown', e => {
             } else {
                 if (!wrongLetters.includes(letter)) {
                     wrongLetters.push(letter)
+
+                    updateWrongLetters()
                 } else {
                     showNotification()
                 }

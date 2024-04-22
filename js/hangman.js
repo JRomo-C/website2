@@ -27,7 +27,10 @@ function displayWord() {
         }
     `
     const innerWord = word.El.innerText.()
-    console.log(wordEl.innerText.replace(/\n/g, ''))
+
+    if (innerWord == selectedWord) {
+        finalMessage.innerText = 'Congratulations! You Won!' popup.style.display = 'flex'
+    }
 }
 
 display()

@@ -48,7 +48,9 @@ window.addEventListener('keydown', e => {
             } else {
                 if (!wrongLetters.includes(letter)) {
                     wrongLetters.push(letter)
-                } else
+                } else {
+                    showNotification()
+                }
             }
         }
     }

@@ -26,7 +26,7 @@ function displayWord() {
             ` ).join('')
         }
     `
-    const innerWord = word.El.innerText.()
+    const innerWord = wordEl.innerText()
 
     if (innerWord == selectedWord) {
         finalMessage.innerText = 'Congratulations! You Won!'
@@ -40,7 +40,7 @@ function updateWrongLettersEl() {
 }
 
 //show Notification
-function showNotification() P
+function showNotification()
 notification.classList.add('show')
 setTimeout(() => {
     notification.classList.remove

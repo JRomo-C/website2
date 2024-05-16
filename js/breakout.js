@@ -3,6 +3,7 @@ close = document.getElementById('close-btn')
 rules = document.getElementById('rules')
 canvas = document.getElementById('canvas')
 ctx = canvas.getContext('2d')
+play = document.getElementById('play')
 
 score = 0
 
@@ -98,6 +99,12 @@ function draw() {
     drawBricks()
     drawScore()
 }
+document.addEventListener('DOMContentLoaded', (event) => {
+    play.addEventListener('click', () => {
+        play.classList.add('hidden');
+        update();
+    })
+});
 
 
 // Move paddle on canvas
@@ -186,6 +193,7 @@ function moveBall() {
                 ball.dy = -1 * ball.dy
                 brick.visible = false
                 increaseScore()
+                drawScore()
                 }
 
             }
@@ -221,7 +229,8 @@ function update() {
     requestAnimationFrame(update)
 }
 
-update()
+
+
 
 
 

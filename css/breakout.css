@@ -19,6 +19,8 @@ canvas {
     border-radius: 5px;
 }
 
+
+
 h1 {
     font-size: 45px;
     color: black;
@@ -61,4 +63,17 @@ h1 {
 
 .rules.show {
     transform: translateX(0);
+}
+
+.play {
+    background-color: green;
+    position: absolute;
+    height: 15vh;
+    width: 15vw;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    color: white;
+}
+
+.hidden {
+    display: none;
 }

@@ -16,7 +16,7 @@ const wrongLetters = []
 
 //Show hidden word
 function displayWord() {
-    wordEl.innerHTML = `
+    wordEL.innerHTML = `
         ${selectedWord
             .split('')
             .map(letter => `
@@ -25,6 +25,7 @@ function displayWord() {
                 </span>
             ` ).join('')
         }
+
     `
     const innerWord = wordEl.innerText()
 
@@ -54,12 +55,14 @@ function updateWrongLettersEl() {
     //Check if lost
     if (wrongLetters.length == figureParts.length) {
         finalMessage.innerText = 'You Lose!'
+        popup.style.display = 'flex' 
     }
 }
 
 //show Notification
-function showNotification()
-notification.classList.add('show')
+function showNotification(){
+notification.classList.add('show')}
+
 setTimeout(() => {
     notification.classList.remove}, 2000)
 
@@ -96,6 +99,13 @@ playAgainBtn.addEventListener('click', () => {
     selectedWord = words[selectedIndex]
 
     displayWord()
+
+    updateWrongLetterEl()
+
+    popup.style.display = 'none'
+})
+
+displayWord()
 
     updateWrongLetterEl()
 

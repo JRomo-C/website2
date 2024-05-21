@@ -1,5 +1,5 @@
-const wordEL = document.getElementById('word')
-const wronglettersEL = document.getElementById('wrong-letters')
+const wordEl = document.getElementById('word')
+const wrongLettersEl = document.getElementById('wrong-letters')
 const playAgainBtn = document.getElementById('play-button')
 const popup = document.getElementById('popup-container')
 const notification = document.getElementById('notification-container')
@@ -8,7 +8,7 @@ const figureParts = document.querySelectorAll('.figure-part')
 
 const word = ['application', 'programming', 'interface', 'wizard']
 
-let selectedIndex = Math.floor(word.length)
+let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
 
 const correctLetters = []
@@ -27,7 +27,7 @@ function displayWord() {
         }
 
     `
-    const innerWord = wordEl.innerText()
+    const innerWord = wordEl.innerText.replace(/\n/g, '')
 
     if (innerWord == selectedWord) {
         finalMessage.innerText = 'Congratulations! You Won!'
@@ -35,17 +35,26 @@ function displayWord() {
     }
 }
 
-//Update the wrong Letters
-function updateWrongLettersEl() {
+//Show Notification
+function showNotification() {
+    notification.classList.add('show')
+
+    setTimeout(() => {
+        notification.classList.remove('show')
+    }, 2500)
+}
+
+//Update the wrong letters
+function updateWrongLetters() {
     wrongLettersEl.innerHTML = `
-    ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
-    ${wrongLetters.map(letter => `<span>{letter}</span>`)}
+        ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+        ${wrongLetters.map(letter => `<span>${letter}</span>`)}
     `
 
     figureParts.forEach((part, index) => {
         const errors = wrongLetters.length
 
-        if (index < errors){
+        if (index < errors) {
             part.style.display = 'block'
         } else {
             part.style.display = 'none'
@@ -55,18 +64,11 @@ function updateWrongLettersEl() {
     //Check if lost
     if (wrongLetters.length == figureParts.length) {
         finalMessage.innerText = 'You Lose!'
-        popup.style.display = 'flex' 
+        popup.style.display = 'flex'
     }
 }
 
-//show Notification
-function showNotification(){
-notification.classList.add('show')}
-
-setTimeout(() => {
-    notification.classList.remove}, 2000)
-
-//Keydown letter press
+// KeyDown Letter Press
 window.addEventListener('keydown', e => {
 
     if (e.keyCode >= 65 && e.keyCode <=90) {
@@ -78,13 +80,15 @@ window.addEventListener('keydown', e => {
 
                 displayWord()
             } else {
-                if (!wrongLetters.includes(letter)) {
-                    wrongLetters.push(letter)
+                showNotification()
+            }
+        } else {
+            if (!wrongLetters.includes(letter)) {
+                wrongLetters.push(letter)
 
-                    updateWrongLetters()
-                } else {
-                    showNotification()
-                }
+                updateWrongLetters()
+            } else {
+                showNotification()
             }
         }
     }
@@ -95,12 +99,11 @@ playAgainBtn.addEventListener('click', () => {
     correctLetters.length = 0
     wrongLetters.length = 0
 
-    selectedIndex = Math.floor(word.length)
-    selectedWord = words[selectedIndex]
-
+    selectedIndex = Math.floor(word.length * Math.random())
+    selectedWord = word[selectedIndex]
     displayWord()
 
-    updateWrongLetterEl()
+    updateWrongLetters()
 
     popup.style.display = 'none'
 })
